@@ -1,0 +1,32 @@
+.bannerContainer {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner {
+  width: 80vw;
+  height: 350px;
+  background-color: #ed9088;
+  border-radius: 10px;
+  position: relative;
+}
+.shopBtn {
+  width: 130px;
+  height: 50px;
+  background-color: #f43297;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  font-family: 'Crimson Text', serif;
+  border: 1px solid #f43297;
+  background-color: white;
+  color: #f43297;
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+}
