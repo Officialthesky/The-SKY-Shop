@@ -1,15 +1,18 @@
 import './App.css';
-import Banner from './components/Banner';
-import CategoriesContainer from './components/CategoriesContainer';
-import Header from './components/Header';
-import ProductList from './components/ProductList';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import AuthLogin from './pages/Auth/Login';
+import AuthSignup from './pages/Auth/Signup';
 function App() {
   return (
     <div className='App'>
-      <Header />
-      <Banner />
-      <CategoriesContainer />
-      <ProductList />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/login' element={<AuthLogin />} />
+          <Route path='/signup' element={<AuthSignup />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

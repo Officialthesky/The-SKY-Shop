@@ -5,6 +5,7 @@ import { GrSearch } from 'react-icons/gr';
 import { CgProfile } from 'react-icons/cg';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { AiOutlineHeart } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 export default function Header() {
   const [openSignUpModal, setOpenSignUpModal] = useState(false);
   const showSignUpModal = () => {
@@ -46,7 +47,9 @@ export default function Header() {
         <div className='headerSignupModal'>
           <h2>Hello User</h2>
           <p>To access your account</p>
-          <button className='signUpBtn'>Sign Up</button>
+          <Link to='/signup'>
+            <button className='signUpBtn'>Sign Up</button>
+          </Link>
           <hr></hr>
           <div className='myOrders'>
             <BsHandbag />
