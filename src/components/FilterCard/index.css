@@ -1,0 +1,68 @@
+.productFilterContainer {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+}
+.filterCard {
+  width: 270px;
+  min-height: 400px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.filterLabel,
+.filterType {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.filterLabel {
+  height: 50px;
+}
+.filterCard {
+  font-weight: 900;
+}
+.filterType {
+  margin-top: 30px;
+  min-height: 50px;
+}
+.expandableFilterType {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.typeArrow {
+  font-size: 25px;
+}
+.genderFilterCard {
+  min-height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+.genderFilterCard div {
+  padding: 10px 20px;
+  border: 1px solid #f43297;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.genderFilterCard div:hover {
+  background-color: #f43297;
+  color: white;
+}
+.priceRange {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 20px;
+  height: 100px;
+}
+.slider {
+  width: 100%;
+  color: #f43297;
+}

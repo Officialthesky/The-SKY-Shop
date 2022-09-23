@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.css';
+import { BsHandbag } from 'react-icons/bs';
 import { GrSearch } from 'react-icons/gr';
 import { CgProfile } from 'react-icons/cg';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { AiOutlineHeart } from 'react-icons/ai';
 export default function Header() {
+  const [openSignUpModal, setOpenSignUpModal] = useState(false);
+  const showSignUpModal = () => {
+    setOpenSignUpModal(!openSignUpModal);
+  };
   return (
     <header>
       <div className='searchInput'>
@@ -15,7 +20,7 @@ export default function Header() {
         <GrSearch />
       </div>
       <div className='headerProfile'>
-        <div className='profileItem'>
+        <div className='profileItem' onClick={showSignUpModal}>
           <div className='profileIcon'>
             <CgProfile />
           </div>
@@ -37,6 +42,18 @@ export default function Header() {
           <button>Login</button>
         </div>
       </div>
+      {openSignUpModal ? (
+        <div className='headerSignupModal'>
+          <h2>Hello User</h2>
+          <p>To access your account</p>
+          <button className='signUpBtn'>Sign Up</button>
+          <hr></hr>
+          <div className='myOrders'>
+            <BsHandbag />
+            <p>My Orders</p>
+          </div>
+        </div>
+      ) : null}
     </header>
   );
 }
