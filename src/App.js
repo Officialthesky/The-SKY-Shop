@@ -1,5 +1,6 @@
 import './App.css';
 import Banner from './components/Banner';
+import CategoriesContainer from './components/CategoriesContainer';
 import Header from './components/Header';
 import TabsCategory from './components/TabsCategory';
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <TabsCategory />
       <Banner />
+      <CategoriesContainer />
     </div>
   );
 }
